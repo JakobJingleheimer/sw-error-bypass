@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head></head>
+	<body>
+		<p>See the <a href="./READEME.md">README</a> for instructions</p>
+
+		<script type="module">
+			await navigator.serviceWorker.register('/sw.js', {
+				scope: '/',
+				type: 'module',
+			}).catch(console.error);
+		</script>
+		<script src="/client.js" type="module"></script>
+	</body>
+</html>
